@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div id="gallHeader"></div>
+<div id="galleria"></div>
+<script src="galleria/galleria-1.4.2.min.js"></script>
+<script src="galleria/plugins/flickr/galleria.flickr.min.js"></script>
+<script>
+    Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+	Galleria.run('#galleria', {
+		flickr: 'set:72157631426725906',
+    	flickrOptions: {
+    	    sort: 'date-posted-desc'
+    	}
+	});
+</script>
+
+<div id="ieFixDiv" style="width:960px;"></div>
+<p style="text-align:center; margin-top:30px;">All photos by <a href="http://www.alexander-henderson.com" style="texdecoration: underline;">Alexander Henderson Photography</a></p>

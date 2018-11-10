@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+
+<script type="text/javascript">
+var tim = 200;
+var backCount = 1;
+var backImg = {{page.images}}
+
+window.onload=function(){
+   document.getElementById("pubHeader").style.backgroundImage= "url(" + backImg[0] + ")";
+   document.getElementById("pageHeader").style.backgroundImage= "url(" + backImg[1] + ")";
+   for (i = 0; i < backImg.length; i++) {
+		var img=new Image();
+    	img.src=backImg[i];
+	}
+}
+
+window.setInterval(function() {
+	tim--;
+	document.getElementById("pubHeader").style.opacity = tim/100;
+	if (tim === 0){
+		document.getElementById("pubHeader").style.backgroundImage= "url(" + backImg[backCount] + ")";
+		backCount ++;
+		if (backCount === backImg.length){
+			backCount = 0;
+		}
+	}
+	if (tim === -100){
+		document.getElementById("pageHeader").style.backgroundImage= "url(" + backImg[backCount] + ")";
+		tim = 200;
+	}
+}, 1);
+</script>
+
+<div id="pageHeader"></div>
+<div id="pubHeader"></div>
+
+<div id="content">
+   	{{ content }}
+</div>
