@@ -6,25 +6,25 @@
   <body>
 
     <div id="container">
-		<p id="logo"><a href="/"><img src="images/logo.png" alt="Cotto Catering London Logo"/></a></p>
+		<p id="logo"><a href="{{ relative_url }}"><img src="{{ "/images/logo.png" | relative_url }}" alt="Cotto Catering London Logo"/></a></p>
 
 		<ul id="navigation">
-			<li><a href="/about/">About</a></li>
-			<li><a href="/foodservice/">Food & Service</a></li>
-			<li><a href="/occasions/">Occasions</a></li>
-			<li><a href="/testimonials/">Happy Customers</a></li>
-			<li><a href="/gallery/">Gallery</a></li>
-			<li><a href="/contact/">Get in Touch</a></li>
+			<li><a href="{{ "/about/" | relative_url }}">About</a></li>
+			<li><a href="{{ "/foodservice/" | relative_url }}">Food & Service</a></li>
+			<li><a href="{{ "/occasions/" | relative_url }}">Occasions</a></li>
+			<li><a href="{{ "/testimonials/" | relative_url }}">Happy Customers</a></li>
+			<li><a href="{{ "/gallery/" | relative_url }}">Gallery</a></li>
+			<li><a href="{{ "/contact/" | relative_url }}">Get in Touch</a></li>
 		</ul>
 
     		{{ content }}
     		
 		<p id="footer">
 		.<br/>
-		+44(0)7881 623 132 | <a href="mailto:ciao@cottolondon.com" >ciao@cottolondon.com</a> | <a href="http://twitter.com/CottoLondon" >	@CottoLondon</a>
+		+44(0)7881 623 132 | <a href="mailto:ciao@cottolondon.com" >ciao@cottolondon.com</a> | <a href="//twitter.com/CottoLondon" >@CottoLondon</a>
 			<br/>
 			&copy; Cotto Catering London | Design by <a href="//krj.io" >Daniel Karaj</a>
-		</br><a href="//facebook.com/cottolondon"><img src="/images/face.png" alt="Facebook" class="icon"/></a><a href="//twitter.com/CottoLondon"><img src="/images/twit.png" alt="twitter" class="icon"/></a>
+		</br><a href="//facebook.com/cottolondon"><img src="{{ "/images/face.png" | relative_url }}" alt="Facebook" class="icon"/></a><a href="//twitter.com/CottoLondon"><img src="{{ "/images/twit.png" | relative_url }}" alt="twitter" class="icon"/></a>
 		</p>
 	</div>
 
