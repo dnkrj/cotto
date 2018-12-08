@@ -6,7 +6,8 @@ layout: default
 <script type="text/javascript">
 var tim = 200;
 var backCount = 1;
-var backImg = {{page.images}}.map(url => {{ site.baseurl }} + url);
+var backImg = {{page.images}}
+backImg = backImg.map(url => `{{ site.baseurl }}/${url}`);
 
 window.onload=function(){
    document.getElementById("pubHeader").style.backgroundImage= "url(" + backImg[0] + ")";
